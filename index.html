@@ -3,95 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Art</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/41c3f97ee8.js" crossorigin="anonymous"></script>
-    <title>Alphabet Art</title>
 </head>
-
 <body>
     <header>
-        <!-- <Logo/> -->
-        <div class="logo">
-            <img src="https://placehold.co/250x100/red/white?text=Logo" alt="Logo">
-        </div>
-
-        <!-- <NavigationMenu/> -->
-        <nav>
-            <div>
-                <a href="stickers/index.html"><img src="./assets/navImages/sticker.png" alt="Stickers"></a>
-                <p>Stickers</p>
-            </div>
-            <div>
-                <a href="workshop/index.html"><img src="./assets/navImages/workshop.png" alt="Workshop"></a>
+        <!-- <img class="alphabet-art-logo" src="images/nav-img/nav.jpeg" alt="alphabet Art"> -->
+        <nav class="navigation-bar">
+            <div class="nav-item">
+                <img src="images/nav-img/workshop.jpeg" alt="workshop">
                 <p>Workshop</p>
             </div>
-            <div>
-                <a href="contest/index.html"><img src="./assets/navImages/contest.png" alt="Contest"></a>
+            <div class="nav-item">
+                <img src="images/nav-img/contest.jpeg" alt="contest">
                 <p>Contest</p>
+            </div>
+            <div class="nav-item">
+                <img src="images/nav-img/sticker.jpeg" alt="stickers">
+                <p>Stickers</p>
             </div>
         </nav>
     </header>
-    <!-- <Carousel/> -->
-    <div class="carousel">
-        <img src="https://placehold.co/400x200/orange/white?text=Stickers" alt="Carousel Images">
-        <div class="dots">
-            <span id="dot0" class="dot"></span>
-            <span id="dot1" class="dot"></span>
-            <span id="dot2" class="dot"></span>
-        </div>
+
+    <div>
+        <img class="crousel-img" src="images/crousel/crousel.jpg">
+
+    </div>
+    <div class="dot-container">
+        <span class="dot" id="dot1"></span>
+        <span class="dot" id="dot2"></span>
+        <span class="dot" id="dot3"></span>
+    </div>
+    <div class="button-container">
+        <button class="button">Gallery</button>
     </div>
 
-    <!-- Gallery Button -->
-    <div class="gallery">
-        <button class="pushable">
-            <span class="front">Gallery</span>
-        </button>
-    </div>
+    <div class="main-container"></div>
+    <!--  this is a submit button   -->
+    <div class="submit-div">
+        <button class="submit-button">Submit Your Art</button>
+    </div> `
+    <!-- ===--------------------- -->
+    <h2>Made with love by Sapne waalis!</h2>
 
-    <!-- <AlphabetCards/> -->
-    <div class="container">
-    </div>
-
-    <!-- Submit Your Art Button -->
-    <div class="call-to-action">
-        <button class="pushable">
-            <span class="front">Submit Your Art</span>
-        </button>
-    </div>
-
-    <!-- <Footer/> -->
     <footer>
-        <div class="social-media">
-            <p>Follow Us</p>
-            <ul>
-                <li> <a href="https://www.facebook.com/hashtag/sajhesapne/?source=feed_text&epa=HASHTAG"><img
-                            src="./assets/social/fb.png" alt="Facebook"> </a></li>
-                <li> <a href="https://www.instagram.com/sapnewaali/"><img src="./assets/social/insta.png"
-                            alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/channel/UC2YOf3houhn92YC2JsNhHxw?app=desktop"><img
-                            src="./assets/social/you.png" alt="Youtube"></a></li>
-                <li><a href="https://in.linkedin.com/company/sajhe-sapne"><img src="./assets/social/in.png"
-                            alt="LinkedIn"></a></li>
-                <li><a href="https://twitter.com/sajhesapne?lang=en"><img src="./assets/social/x.png" alt="X"></a></li>
-            </ul>
-        </div>
-        <div class="links">
-            <ul>
-                <li>Contact Us</li>
-                <li>Terms Of Use</li>
-                <li>Report A Bug</li>
-                <li>Hire a Sapnewaali</li>
-                <li>Make a Donation</li>
-            </ul>
-        </div>
-        <div class="sajhe-link-logo">
-            <img src="assets/sajhe-logo.jpeg" alt="sajhe-spne-logo"><br>
-            <a href="https://sajhesapne.org/about" target="_blank">www.sajhesapne.org</a>
-        </div>
-    </footer>
+        <div id="div-item">
+            <p>Follow us</p>
+            <a href="https://www.facebook.com/thebetterindia/videos/iit-delhi-alumna-surabhi-yadav-built-sajhe-sapne-an-ngo-that-aims-to-make-rural-/987222295872578/"
+                class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/sapnewaali/" class="fa fa-instagram"></a>
+            <a href="https://in.linkedin.com/company/sajhe-sapne" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UC2YOf3houhn92YC2JsNhHxw" class="fa fa-youtube"></a>
+            <a href="https://twitter.com/sajhesapne?lang=en" class="fa fa-twitter"></a>
 
-    <script type="module" src="main.js"></script>
+        </div>
+        <div id="div-item2">
+            <ul class="div-ul">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Make a donation</a></li>
+            </ul>
+        </div>
+        <div>
+            <img class="logo-img" src="images/footer/footer-logo.jpeg" alt="">
+
+        </div>
+        <a class="website-link" href="https://sajhesapne.org/about">www.sajhesapne.org</a>
+
+
+
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
