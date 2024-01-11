@@ -1,11 +1,9 @@
 const container = document.querySelector(".main-container")
 const crouselImg = document.querySelector(".crousel-img")
 const dots = document.querySelectorAll(".dot")
-// console.log(crouselImg)
-let i = 0;
-let alphabet;
 
-// crousel ======================================================
+// this veriable used for crousel images
+let i = 0;
 let crousel = [
    "images/crousel/crousel.jpg",
    "images/crousel/crousel2 (1).jpg",
@@ -36,12 +34,11 @@ let frontPattern = [
 let soundArray = ["apple", "ball", "cat", "dog", "elephant", "fish", "goat", "horse", "iglu", "joker", "kite", "lion", "monkey", "nose", "octopus", "pig", "queen", "roket", "snace", "tiger", "umbrella", "ven", "watermellan", "x-ray", "yack", "zebra"]
 
 // loop chala rhe hai i vala loop image ke liye chal rha hai j vala loop pattern ke liye chal rha hai and k vala loop sound ke liye chal rha hai
-
+let alphabet;
 for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    if (j > 5)
       j = 0;
    alphabet = String.fromCharCode(i)
-
    let frontCard = document.createElement("div")
    let backDiv = document.createElement("div")
    container.appendChild(frontCard)
@@ -64,10 +61,7 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    imgArr.setAttribute("src", `images/alphabet/${soundArray[k]}.jpg`)
    imgArr.setAttribute("class", "img-class")
    backDiv.appendChild(imgArr)
-   //   console.log(imageArr)
 
-
-   
    // flipCard=================================
 
    let flipCard = document.createElement("div")
@@ -75,45 +69,57 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    flipCard.appendChild(backDiv)
    container.appendChild(flipCard)
    flipCard.setAttribute("class", "flip-card")
-   // console.log(flipCard);
 
    // this is for image icon in backcard
    let iconsDiv = document.createElement("div")
    iconsDiv.setAttribute("class", "icons-div")
    backDiv.appendChild(iconsDiv)
-   console.log(iconsDiv)
    // like(heart) icon 
    let likeIcon = document.createElement("i")
    likeIcon.classList.add("fa-regular", "fa-heart")
    iconsDiv.appendChild(likeIcon)
    // flip icon
    let flipIcon = document.createElement("i")
-   flipIcon.classList.add("fa-solid","fa-arrow-rotate-left")
+   flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left")
    iconsDiv.appendChild(flipIcon)
-   // share icon
-   let shareIcon=document.createElement("i")
-   shareIcon.classList.add("fa-solid","fa-share-from-square")
-   iconsDiv.appendChild(shareIcon)
 
-   likeIcon.addEventListener("click", (event) =>{
-      // console.log("hi");
-      likeIcon.classList.toggle("fa-solid");
-      likeIcon.style.color = "red"
-      event.stopPropagation()
-  })
-   // ---------------spelling------------------
-   let word = document.createElement("p")
-   word.setAttribute("class", "words")
-   word.innerHTML = soundArray[k];
-   backDiv.appendChild(word);
-
-   flipCard.addEventListener("click", () => {
-      flipCard.classList.toggle("flipped")
-
-      let msg = new SpeechSynthesisUtterance();
-      msg.text = soundArray[k];
-      window.speechSynthesis.speak(msg);
-      // console.log(msg)
+   // 
+   likeIcon.addEventListener("mouseover", (event) => {
+      likeIcon.classList.add("fa-bounce");
+      event.stopPropagation();
    })
+   likeIcon.addEventListener("mouseleave", (event) => {
+      likeIcon.classList.remove("fa-bounce");
+      event.stopPropagation();
+   })
+
+// share icon
+let shareIcon = document.createElement("i")
+shareIcon.classList.add("fa-solid", "fa-share-from-square")
+iconsDiv.appendChild(shareIcon)
+
+
+
+likeIcon.addEventListener("click", (event) => {
+   likeIcon.classList.toggle("fa-solid");
+   likeIcon.style.color = "red"
+   event.stopPropagation()
+})
+// ---------------spelling------------------
+let word = document.createElement("p")
+word.setAttribute("class", "words")
+word.innerHTML = soundArray[k];
+backDiv.appendChild(word);
+
+flipCard.addEventListener("click", () => {
+   flipCard.classList.toggle("flipped")
+
+
+   // ye bhi samajhna hai
+   let msg = new SpeechSynthesisUtterance();
+   msg.text = soundArray[k];
+   window.speechSynthesis.speak(msg);
+   // console.log(msg)
+})
 
 }
