@@ -175,6 +175,7 @@ nav div img {
     border-bottom: 6px solid #105386;
     background-size: 280%;
 }
+
 .pattern4 {
     background-image: url('images/pattern/pattern4.svg');
     background-color: rgb(229, 55, 136);
@@ -182,6 +183,8 @@ nav div img {
     border-bottom: 6px solid #7e283d;
     color: rgb(182, 27, 79);
 }
+
+
 .pattern5 {
     color: #D83400;
     background-image: url('images/pattern/pattern5.svg');
