@@ -1,19 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-/* *{
-    border: 1px solid red;
-} */
-
+@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
-  margin: 0;
-  background-image: url(./assets/bg_small.png);
-}
-
-/* Logo */
-.logo img {
-  display: block;
-  margin: 10px auto;
-  cursor: pointer;
+    background-image: url('images/background image/Background Pattern.png');
+    }
+header {
+    text-align: center;
+    width: 100%;
 }
 
 /* Navigation Menu */
@@ -32,26 +24,50 @@ nav div {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   cursor: pointer;
   /* margin: 5px auto; */
 }
 
-nav div:hover{
-  background: #004CA1
-}
 nav div img {
   border-radius: 50%;
 }
 
-nav div p {
-  margin: 0;
+.nav-item:hover {
+    cursor: pointer;
+    background-color: blue;
+}
+.nav-item p {
+    margin-top: 5px;
 }
 
-.heading {
-  width: 85%;
-  margin: auto;
+/* Carousel */
+.carousel img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.dots span {
+  display: inline-flex;
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  background-color: #59AFFF;
+  border-radius: 50%;
+}
+
+#dot0 {
+  background-color: white;
+}
+
 /* 3D button */
 .gallery {
   width: 80%;
@@ -68,168 +84,111 @@ nav div p {
   margin: auto;
   margin-top: 30px;
 }
-
 .pushable {
-  background: #1375E4;
-  border-radius: 12px;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline-offset: 4px;
+    background: #1375E4;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
 }
-
 .front {
-  display: block;
-  padding: 12px 30px;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  background: #59CDFF;
-  font-family: 'Mochiy Pop One';
-  text-shadow: 0px 1px 0px #367DCA;
-  color: white;
-  transform: translateY(-6px);
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
 }
-
 .pushable:active .front {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
-
-/* Alphabet Cards */
-.container {
-  display: grid;
-  gap: 15px;
-  width: 85%;
-  margin: auto;
-  justify-content: space-around;
-  grid-template-columns: repeat(2, minmax(150px, 300px));
-  grid-template-rows: repeat(2, 1fr);
-  margin-top: 30px;
+.submit-button {
+    width: 80%;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
-
-.backCard {
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 8%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 5px solid black; */
+/* Alphabet cards */
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 300px));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin: auto;
 }
-
-.backCard p {
-  text-align: center;
-  font-size: 5em;
-  font-family: 'Mochiy Pop One';
-  margin: auto;
-  text-shadow: 0px 4px 0px rgb(0, 0, 0, 0.45);
+.front-card {
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px #666; */
 }
-
-.frontCard {
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  border-radius: 8%;
-  box-shadow: 0px 6px 30px 5px lightblue;
-  /* border: 1px solid white; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.back-card {
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    box-shadow: 0px 5px 20px 5px rgb(165 215 232);
 }
-
-.frontCard div {
-  margin: 6px 6px 0px 6px;
+/* this text use backcard */
+.text {
+    font-family: 'Mochiy Pop One';
+    /* font size px me nhi dena hai rem ya em me dena hai */
+    font-size: 104px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 6px;
+    text-align: center;
 }
-
-.frontCard img {
-  width: 100%;
-  display: block;
-  margin: auto;
-  border-radius: 8%;
-  /* border: 1px solid red; */
-}
-
-.frontCard p {
-  color: #1F7AE0;
-  font-family: 'Mochiy Pop One';
-  text-align: center;
-  font-size: 1.2em;
-  margin: 6px;
-}
-
-.fa-icons::before {
-  display: none;
-}
-
-.fa-icons {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1em;
-  padding-bottom: 10px;
-  --fa-animation-iteration-count: 1;
-  color: #1F7AE0;
-
-}
-
-.card {
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  border-radius: 10%;
-}
-
-.card.flipped {
-  transform: rotateY(180deg);
-}
-
-/* Design patterns for back of alphabet cards */
 .pattern1 {
-  background-image: url(./assets/designPatterns/pattern1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #FFB800;
-  border-bottom: 5px solid #BF6800;
-  color: #FF8A00;
+    border-bottom: 6px solid #c77324;
+    background-size: 130%;
+    background-image: url('images/pattern/pattern\ 1.svg');
+    background-color: rgb(250, 160, 26);
+    color: rgb(246, 134, 6);
 }
-
 .pattern2 {
-  background-image: url(./assets/designPatterns/pattern2.svg);
-  background-repeat: no-repeat;
-  background-size: 250%;
-  background-color: #A55FEF;
-  border-bottom: 5px solid #60249F;
-  color: #8030D4;
+    color: rgb(105, 24, 181);
+    background-image: url('images/pattern/pattern2.svg');
+    background-color: rgb(135, 42, 182);
+    border-bottom: 6px solid #621c7e;
+    background-size: 200%;
 }
-
 .pattern3 {
-  background-image: url(./assets/designPatterns/pattern3.svg);
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-color: #59AFFF;
-  border-bottom: 5px solid #1375E4;
-  color: #1375E4;
+    color: rgb(27, 101, 161);
+    background-image: url('images/pattern/pattern3.svg');
+    background-color: rgb(45, 126, 198);
+    border-bottom: 6px solid #105386;
+    background-size: 280%;
 }
-
 .pattern4 {
-  background-image: url(./assets/designPatterns/pattern4.svg);
-  background-repeat: no-repeat;
-  background-size: 250%;
-  background-color: #F36291;
-  border-bottom: 5px solid #DA2D65;
-  color: #DA2D65;
+    background-image: url('images/pattern/pattern4.svg');
+    background-color: rgb(229, 55, 136);
+    background-size: 260%;
+    border-bottom: 6px solid #7e283d;
+    color: rgb(182, 27, 79);
 }
-
 .pattern5 {
-  background-image: url(./assets/designPatterns/pattern5.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #F26335;
-  border-bottom: 5px solid #D83400;
-  color: #D83400;
+    color: #D83400;
+    background-image: url('images/pattern/pattern5.svg');
+    background-color: #F26335;
+    border-bottom: 6px solid #d33616;
+    background-size: 150%;
 }
-
 .pattern6 {
   background-image: url(./assets/designPatterns/pattern6.svg);
   background-repeat: no-repeat;
@@ -241,49 +200,32 @@ nav div p {
 }
 
 /* Footer */
-footer #tag {
-  text-align: center;
-  margin-top: 100px;
-  font-family: 'Mochiy Pop One';
-  font-size: 16px;
-  color: #1375E4;
-  /* border: 1px solid red; */
-}
-footer a { 
-  color: inherit;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-#footer-links {
+footer {
   background-color: #1375E4;
   color: white;
   font-size: 20px;
   font-family: Roboto;
-  margin-top: 10px;
+  margin-top: 20px;
   position: absolute;
   width: 100%;
 }
 
-.social-media{
+.social-media,
+.links {
   width: 80%;
   margin: auto;
   margin-top: 25px;
 }
 
-.links{
-  width: 80%;
-  margin: auto;
-  margin-top: 25px;
+.social-media {
+  padding-top: 10px;
 }
 
 .social-media ul {
   list-style: none;
   padding-left: 0;
   display: flex;
-  margin-top: 10px;
+  margin-top: -10px;
 }
 
 .social-media ul li {
@@ -294,13 +236,17 @@ footer a:hover {
   border-radius: 20%;
 }
 
-.links ul {
-  list-style: none;
-  padding-left: 0;
+ul {
+    list-style: none;
+    margin-top: 30px;
+
 }
 
-.links ul li {
-  margin-bottom: 15px;
+.logo-img {
+    border-radius: 30%;
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 8%;
 }
 
 .links ul li:hover {
@@ -314,134 +260,37 @@ footer a:hover {
   opacity: 0.9;
 }
 
-/* Workshop Page */
-.content{
-  width: 90%;
+.sajhe-link-logo {
+  width: 80%;
   margin: auto;
+  margin-bottom: 40px;
+  font-family: Roboto;
 }
 
-h1{
-  font-family: "Mochiy Pop One";
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: #1375E4;
+.sajhe-link-logo img {
+  width: 15%;
+  height: 15%;
+  border-radius: 8%;
+  max-height: 100px;
+  max-width: 100px;
+  margin-top: 20px;
 }
 
-.content p {
-  font-family: "Roboto";
-  font-size: 16px;
-  text-align: justify;
-  text-justify: auto;
-  color: #8C97A4;
+.sajhe-link-logo a {
+  color: #ffff;
+  text-decoration: none;
 }
-
-.content-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+ /* media queries */
+@media(min-width:320px) {
+    .main-container {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
 }
-
-.content-image p{
-  margin: auto;
-  color: #1375E4;
+@media(min-width:481) {
+    .main-container {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
 }
-.content-image img{
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  border-radius: 10px;
-}
-
-#table-div {
-  border-radius: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-
-th {
-  background: #1375E4;
-  color: white;
-  font-family: "Roboto";
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  font-size: 18px;
-  padding: 10px 0px 10px 0px;
-}
-
-td{
-  text-align: center;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  color: #1375E4;
-  border-bottom: 1px solid #D9EBFF;
-  padding: 20px 0px 20px 0px;
-}
-
-.register {
-  display: block;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 16px;
-  background: #59CDFF;
-  font-family: 'Mochiy Pop One';
-  text-shadow: 0px 1px 0px #367DCA;
-  color: white;
-  transform: translateY(-6px);
-}
-
-.pushable:active .register {
-  transform: translateY(-2px);
-}
-
-/* Media query to change grid count and text size for different screen sizes */
-@media (min-width:320px) {
-  .container {
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-  }
-
-  .backCard p {
-    font-size: 6.5em;
-  }
-
-  .fa-icons {
-    font-size: 1.2em;
-  }
-
-  body {
-    background-image: url(./assets/bg_small.png);
-  }
-}
-
-@media (min-width:481px) {
-  .container {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-  }
-
-  .backCard p {
-    font-size: 9em;
-  }
-
-  .fa-icons {
-    font-size: 1.5em;
-  }
-
-  body {
-    background-image: url(./assets/bg_small.png);
-  }
-
-  .frontCard p {
-    font-size: 25px;
-  }
-}
-
 @media (min-width:641px) {
   .container {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -461,25 +310,6 @@ td{
 
   .frontCard p {
     font-size: 25px;
-  }
-
-  h1{
-    font-size: 24px;
-  }
-  .content p {
-    font-size: 20px;
-  }
-
-  th {
-    font-size: 18px;
-  }
-
-  td {
-    font-size: 16px;
-  }
-
-  footer #tag {
-    font-size: 18px;
   }
 }
 
@@ -504,26 +334,6 @@ td{
   .frontCard p {
     font-size: 25px;
   }
-
-  h1{
-    font-size: 24px;
-  }
-
-  .content p {
-    font-size: 20px;
-  }
-
-  th {
-    font-size: 18px;
-  }
-
-  td {
-    font-size: 16px;
-  }
-
-  footer #tag {
-    font-size: 18px;
-  }
 }
 
 @media (min-width:1025px) {
@@ -546,26 +356,6 @@ td{
 
   .frontCard p {
     font-size: 30px;
-  }
-
-  h1{
-    font-size: 45px;
-  }
-
-  .content p{
-    font-size: 26px;
-  }
-
-  th {
-    font-size: 20px;
-  }
-
-  td {
-    font-size: 18px;
-  }
-
-  footer #tag {
-    font-size: 20px;
   }
 }
 
@@ -591,25 +381,5 @@ td{
 
   .frontCard p {
     font-size: 35px;
-  }
-
-  h1{
-    font-size: 45px;
-  }
-
-  .content p{
-    font-size: 26px;
-  }
-
-  th {
-    font-size: 20px;
-  }
-
-  td {
-    font-size: 18px;
-  }
-
-  footer #tag {
-    font-size: 20px;
   }
 }
